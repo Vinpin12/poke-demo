@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.coins {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+
+.Common {
+	color: #999999;
+	text-shadow: 2px 2px 7px rgb(53, 53, 53);
+}
+.Uncommon {
+	color: #3c4c8a;
+	text-shadow: 2px 2px 7px rgb(53, 53, 53);
+}
+.Rare {
+	color: #bb17e4;
+	text-shadow: 1px 1px 5px rgb(130, 102, 74);
+}
+.Super-Rare {
+	color: #e182f0;
+	text-shadow: 2px 2px 7px rgb(209, 100, 50);
+}
+.Legendary {
+	color: #daa622;
+	text-shadow: 2px 2px 7px rgb(240, 225, 23);
+}
+.static {
+	position: fixed;
+	bottom: 450px;
+}
+
+.shiny {
+	color: #ED7BFF;
+	text-shadow: 2px 2px 7px rgba(255, 221, 0, 1);
+}
+
+.shiny-encounter {
+	position: inherit;
+	background-image: url("../images/grass.png");
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-color: #e9b83bd7;
+	width: auto;
+	height: auto;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:20px;
+	padding:14px 24px;
+	text-decoration:none;
+  }
+
+.encounter {
+  position: inherit;
+  background-image: url("../images/grass.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  min-width: 256px;
+  min-height: 128px;
+  width: auto;
+  height: auto;
+  border-radius:3px;
+  display:inline-block;
+  cursor:pointer;
+  color:#000000;
+  font-family:Arial;
+  font-size:20px;
+  padding:14px 24px;
+  text-decoration:none;
+}
+
+.pokeball {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 45%, #ffffff 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+}
+.pokeball:disabled {
+	box-shadow:inset 0px 1px 0px 0px #303030;
+	background:linear-gradient(to bottom, #303030 45%, #aaaaaa 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+
+.pokeball:disabled:hover {
+	background:linear-gradient(to bottom, #212121 45%, #9d9d9d 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+.pokeball:hover {
+	background:linear-gradient(to bottom, #dd4010 45%, #ffffff 60%);
+	border-radius:3px;
+}
+
+.greatball {
+	box-shadow:inset 0px 1px 0px 0px #4164d6;
+	background:linear-gradient(to bottom, #2661e1 45%, #ffffff 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+}
+.greatball:disabled {
+	box-shadow:inset 0px 1px 0px 0px #303030;
+	background:linear-gradient(to bottom, #303030 45%, #aaaaaa 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+
+.greatball:disabled:hover {
+	background:linear-gradient(to bottom, #212121 45%, #9d9d9d 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+.greatball:hover {
+	background:linear-gradient(to bottom, #241bd0 45%, #ffffff 60%);
+	border-radius:3px;
+}
+
+.ultraball {
+	box-shadow:inset 0px 1px 0px 0px #e8cd35;
+	background:linear-gradient(to bottom, #f0da5c 45%, #ffffff 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+}
+.ultraball:disabled {
+	box-shadow:inset 0px 1px 0px 0px #303030;
+	background:linear-gradient(to bottom, #303030 45%, #aaaaaa 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+
+.ultraball:disabled:hover {
+	background:linear-gradient(to bottom, #212121 45%, #9d9d9d 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+.ultraball:hover {
+	background:linear-gradient(to bottom, #e8c91a 45%, #ffffff 60%);
+	border-radius:3px;
+}
+
+.masterball {
+	box-shadow:inset 0px 1px 0px 0px #e8cd35;
+	background:linear-gradient(to bottom, #d01ae8 45%, #ffffff 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+}
+.masterball:disabled {
+	box-shadow:inset 0px 1px 0px 0px #303030;
+	background:linear-gradient(to bottom, #303030 45%, #aaaaaa 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+
+.masterball:disabled:hover {
+	background:linear-gradient(to bottom, #212121 45%, #9d9d9d 60%);
+	border-radius:3px;
+	border:1px solid #000000;
+}
+.masterball:hover {
+	background:linear-gradient(to bottom, #d01ae8 45%, #ffffff 60%);
+	border-radius:3px;
+}
+
+.new-encounter {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.new-encounter:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.new-encounter:active {
+	position:relative;
+	top:1px;
+}
+
+        

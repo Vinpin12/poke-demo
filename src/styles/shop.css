@@ -1,0 +1,84 @@
+.coins {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+.spinner {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.arrow {
+	height: 10%;
+	width: 5%;
+	position: fixed;
+	bottom: 28.6%;
+	right: 38%;
+}
+
+.button {
+	background-color:#d16d20;
+	border-radius:3px;
+	border:2px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+	margin:auto;
+	width: 100%;
+}
+
+.button:disabled {
+	background-color:#5c5c5c;
+	border:2px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+}
+
+.buy {
+	background:linear-gradient(to bottom, #e1b114 5%, #d8c113 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding:14px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+
+.spin {
+	animation: spin 4s linear;
+	-webkit-animation: spin 4s linear;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    10% { -webkit-transform: rotate(360deg); }
+    20% { -webkit-transform: rotate(720deg); }
+    40% { -webkit-transform: rotate(1080deg); }
+    70% { -webkit-transform: rotate(1440deg); }
+    100% { -webkit-transform: rotate(1800deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(360deg); }
+    20% { transform: rotate(720deg); }
+    40% { transform: rotate(1080deg); }
+	60% { transform: rotate(1440deg); }
+    80% { transform: rotate(1600deg); }
+    100% { transform: rotate(1800deg); }
+}

@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: #282c34;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header{
+  background: #333;
+  padding: 15px;
+  text-align:center;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.leftpanel{
+  background: #CCC;
+}
+
+.rightpanel{
+  background: #666;
+}
+
+#wrapper {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid red;
+}
+
+#wrapper > .header {
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+#wrapper > .header + div {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+#wrapper > .header + div > div:first-of-type {
+  -webkit-flex: 7 0 0;
+  flex: 7 0
+}

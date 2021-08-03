@@ -39,7 +39,7 @@ code {
 }
 .static {
 	position: fixed;
-	bottom: 450px;
+	bottom: 25%;
 }
 
 .shiny {

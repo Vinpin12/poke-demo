@@ -18,7 +18,8 @@ class Inventory extends React.Component {
     var id = e.target.id;
     var temp_inventory = this.state.inventory;
     temp_inventory.splice(id, 1)
-    localStorage.setItem('inventory', temp_inventory);
+    console.log(temp_inventory);
+    localStorage.setItem('inventory', JSON.stringify(temp_inventory));
     this.setState({
 
     })

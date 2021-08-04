@@ -36,7 +36,8 @@ class Encounter extends React.Component {
       cookies.set('pokeballs', 5, { path: '/' });
       cookies.set('greatballs', 1, { path: '/' });
       cookies.set('ultraballs', 1, { path: '/' });
-      cookies.set('can-spin', true, { path: '/' });
+      cookies.set('masterballs', 0, { path: '/' });
+      cookies.set('spins', 3, { path: '/' });
       localStorage.setItem('inventory', JSON.stringify([{catchid: 0, id: '25', type: 'Uncommon', name: 'Pikachu', shiny: false}]));
       this.setState({
         new_trainer: false
@@ -147,6 +148,9 @@ class Encounter extends React.Component {
         console.log(temp_inventory)
         localStorage.setItem('inventory', JSON.stringify(temp_inventory));
         cookies.set('pokecoins', parseInt(cookies.get('pokecoins')) + coins);
+        if (type === 'Legendary') { // Add a spin if caught pokemon is Legendary type
+          cookies.set('spins', parseInt(cookies.get('spins')) + 1);
+        }
       }
       else {
         this.setState({ // Set caught state to false if seed is greater than catch chance
@@ -200,7 +204,7 @@ class Encounter extends React.Component {
             <button className="pokeball" onClick={() => this.catchEncounter(this.state.type, this.state.id, "pokeballs")} disabled={this.state.id === "" || this.state.flee || this.state.is_caught}>Pokeball x{cookies.get('pokeballs')}</button>
             <button className="greatball" onClick={() => this.catchEncounter(this.state.type, this.state.id, "greatballs")} disabled={this.state.id === "" || this.state.flee || this.state.is_caught}>Greatball x{cookies.get('greatballs')}</button>
             <button className="ultraball" onClick={() => this.catchEncounter(this.state.type, this.state.id, "ultraballs")} disabled={this.state.id === "" || this.state.flee || this.state.is_caught}>Ultraball x{cookies.get('ultraballs')}</button><br></br>
-            <button className={cookies.get('masterballs') > 0 ? "masterball" : "masterball hidden"} onClick={() => this.catchEncounter(this.state.type, this.state.id, "masterballs")} disabled={this.state.id === "" || this.state.flee || this.state.is_caught}>Masterballs x{cookies.get('masterballs')}</button>
+            <button className={cookies.get('masterballs') > 0 ? "masterball" : "masterball-hidden"} onClick={() => this.catchEncounter(this.state.type, this.state.id, "masterballs")} disabled={this.state.id === "" || this.state.flee || this.state.is_caught}>Masterballs x{cookies.get('masterballs')}</button>
           </div>
           <div className="static">
             <button className="new-encounter" onClick={this.encounter}>New Encounter</button>

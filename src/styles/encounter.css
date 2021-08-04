@@ -191,6 +191,11 @@ code {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #000000;
 }
+
+.masterball-hidden {
+	visibility: hidden;
+}
+
 .masterball:disabled {
 	box-shadow:inset 0px 1px 0px 0px #303030;
 	background:linear-gradient(to bottom, #303030 45%, #aaaaaa 60%);

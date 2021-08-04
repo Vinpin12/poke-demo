@@ -11,12 +11,18 @@
 	text-align: center;
 }
 
+.wheel {
+	position: relative;
+	overflow: visible;
+}
+
 .arrow {
 	height: 10%;
-	width: 5%;
-	position: fixed;
-	bottom: 28.6%;
-	right: 38%;
+	width: 10%;
+	bottom: 48%;
+	float: right;
+	position: absolute;
+	right: 7%;
 }
 
 .button {

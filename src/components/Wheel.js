@@ -21,15 +21,14 @@ class Wheel extends React.Component {
     super();
     this.state = {
       spin: 0,
-      disabled: cookies.get('can-spin'),
       message: "",
       hidden: true
     }
   }
   componentDidMount() {
-    console.log(cookies.get('can-spin'))
+    //console.log("Can Spin? " + cookies.get('can-spin'))
   }
-
+ // Worst code ever written wow...
  getSpin() {
   setTimeout(function () {
     this.setState({hidden: false});
@@ -61,10 +60,10 @@ class Wheel extends React.Component {
   }
   this.setState({
     spin: setAngle,
-    disabled: 'false',
-    message: msg
+    message: msg,
+    hidden: true
   })
-  cookies.set('can-spin', false);
+  cookies.set('spins', parseInt(cookies.get('spins')) - 1);
  }
 
   render() {
@@ -86,9 +85,9 @@ class Wheel extends React.Component {
                       background={'#000000'}
                       startAngle={this.state.spin}
                     />
-                    <p hidden={this.state.hidden}>{this.state.message}</p>
                     </div>
-                  <button onClick={() => this.getSpin()} className="button" disabled={this.state.disabled === 'false'}>Spin</button>
+                  <p hidden={this.state.hidden}>{this.state.message}</p>
+                  <button onClick={() => this.getSpin()} className="button" disabled={cookies.get('spins') === '0'}>Spin x{cookies.get('spins')}</button>
                   </div>
     );
   }

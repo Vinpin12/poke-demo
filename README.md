@@ -1,3 +1,9 @@
+# This project is a React App of a client side Pokemon catching simulator
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

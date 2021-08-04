@@ -1,4 +1,5 @@
-# This project is a React App of a client side Pokemon catching simulator
+# Poke-Demo
+This project is a React App of a client side Pokemon catching simulator
 
 
 

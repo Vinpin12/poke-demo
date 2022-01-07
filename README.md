@@ -1,5 +1,6 @@
 # Poke-Demo
 This project is a React App of a client side Pokemon catching simulator
+This was a simple client side react app as a test to simulate pokemon catching in the browser. It is similar to a gacha game
 
 
 
